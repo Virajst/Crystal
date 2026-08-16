@@ -1,0 +1,1 @@
+{"name":"CRYSTAL Auth Preview","image":"mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm","forwardPorts":[3000],"portsAttributes":{"3000":{"label":"CRYSTAL Auth Preview","onAutoForward":"openPreview"}},"postCreateCommand":"npm install","postAttachCommand":"npm start","customizations":{"codespaces":{"openFiles":["public/index.html"]}}}

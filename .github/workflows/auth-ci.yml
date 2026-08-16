@@ -1,0 +1,20 @@
+name: CRYSTAL auth CI
+
+on:
+  push:
+    branches: [main, auth-ui3]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install
+      - run: node --check src/server.js
+      - run: node --check src/security.js
+      - run: node --check public/app.js
